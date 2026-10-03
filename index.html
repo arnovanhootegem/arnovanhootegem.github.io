@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arno Van Hootegem</title>
+<meta name="description" content="Arno Van Hootegem — sociologist and postdoctoral researcher at the Centre for Fertility and Health, Norwegian Institute of Public Health.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf8f4;
+    --surface: #ffffff;
+    --text: #1d1d1b;
+    --muted: #5f5d58;
+    --line: #e6e1d8;
+    --accent: #2f5d50;
+    --accent-soft: #e4ede9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141513;
+      --surface: #1c1d1b;
+      --text: #ecebe6;
+      --muted: #a3a19a;
+      --line: #2e302c;
+      --accent: #8cc4b0;
+      --accent-soft: #23302b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 "Inter", system-ui, -apple-system, sans-serif;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  /* Navigation */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .inner {
+    max-width: 760px; margin: 0 auto; padding: 12px 20px;
+    display: flex; gap: 20px; align-items: center; overflow-x: auto;
+    white-space: nowrap; scrollbar-width: none;
+  }
+  nav .inner::-webkit-scrollbar { display: none; }
+  nav .name { font-family: "Fraunces", Georgia, serif; font-weight: 600; color: var(--text); text-decoration: none; margin-right: auto; }
+  nav a.link { color: var(--muted); text-decoration: none; font-size: 14px; }
+  nav a.link:hover { color: var(--accent); }
+
+  main { max-width: 760px; margin: 0 auto; padding: 0 20px 80px; }
+  section { padding: 56px 0 8px; scroll-margin-top: 48px; }
+  h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; line-height: 1.2; }
+  h2 { font-size: 26px; margin: 0 0 20px; }
+  h3 { font-size: 16px; margin: 0 0 4px; }
+
+  /* Hero */
+  .hero { display: flex; gap: 28px; align-items: center; padding-top: 64px; flex-wrap: wrap; }
+  .avatar {
+    width: 128px; height: 128px; border-radius: 50%; flex: none;
+    background: var(--accent-soft); color: var(--accent);
+    display: grid; place-items: center;
+    font-family: "Fraunces", Georgia, serif; font-size: 44px; font-weight: 600;
+    object-fit: cover;
+  }
+  .hero h1 { font-size: 40px; margin: 0 0 6px; }
+  .hero .role { color: var(--muted); margin: 0; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .links a {
+    font-size: 14px; text-decoration: none; padding: 5px 12px;
+    border: 1px solid var(--line); border-radius: 999px; background: var(--surface);
+  }
+  .links a:hover { border-color: var(--accent); }
+
+  .interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; padding: 0; list-style: none; }
+  .interests li { background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 500; padding: 4px 10px; border-radius: 6px; }
+
+  /* Lists */
+  .pubs { list-style: none; padding: 0; margin: 0; }
+  .pubs li { padding: 14px 0; border-top: 1px solid var(--line); }
+  .pubs li:last-child { border-bottom: 1px solid var(--line); }
+  .pubs .title { font-weight: 600; }
+  .pubs .meta { color: var(--muted); font-size: 14px; }
+  .pubs .year { display: inline-block; min-width: 44px; color: var(--accent); font-weight: 600; font-size: 14px; }
+  .tag { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; margin-left: 4px; }
+  .more { margin-top: 16px; font-size: 14px; }
+
+  .cards { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
+  .card p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+
+  .contact p { margin: 0 0 10px; }
+  footer { max-width: 760px; margin: 0 auto; padding: 24px 20px 40px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+
+  @media (max-width: 520px) {
+    .hero h1 { font-size: 32px; }
+    .avatar { width: 96px; height: 96px; font-size: 34px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="inner">
+    <a class="name" href="#top">Arno Van Hootegem</a>
+    <a class="link" href="#about">About</a>
+    <a class="link" href="#publications">Publications</a>
+    <a class="link" href="#projects">Projects</a>
+    <a class="link" href="#wip">In progress</a>
+    <a class="link" href="#contact">CV &amp; contact</a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <header class="hero">
+    <!-- To add a photo: upload photo.jpg to the repo and replace the div below with
+         <img class="avatar" src="photo.jpg" alt="Arno Van Hootegem"> -->
+    <div class="avatar" aria-hidden="true">AVH</div>
+    <div>
+      <h1>Arno Van Hootegem</h1>
+      <p class="role">Postdoctoral researcher · Centre for Fertility and Health<br>Norwegian Institute of Public Health (FHI), Oslo</p>
+      <div class="links">
+        <a href="https://scholar.google.com/citations?user=5oM4TCcAAAAJ">Google Scholar</a>
+        <a href="https://bsky.app/profile/arnovanhootegem.bsky.social">Bluesky</a>
+        <a href="https://osf.io/tb7z4/">OSF</a>
+        <a href="mailto:arno.van.hootegem@fhi.no">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About</h2>
+    <p>I am a sociologist and postdoctoral researcher at the Centre for Fertility and Health at the Norwegian Institute of Public Health. My work sits at the intersection of genetics, health and social inequality: I study how genetic and social factors shape outcomes like mental health and labour-market careers, and how the public thinks about new reproductive and genetic technologies.</p>
+    <p>Before joining FHI, I did my PhD in sociology at the Centre for Sociological Research (CeSO), KU Leuven, where I studied public opinion on distributive justice, welfare attitudes and attitudes toward asylum policy across Europe.</p>
+    <ul class="interests">
+      <li>Social inequality</li>
+      <li>Genetics &amp; society</li>
+      <li>Mental health</li>
+      <li>Labour markets</li>
+      <li>Public opinion</li>
+      <li>Survey experiments</li>
+    </ul>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2>Selected publications</h2>
+    <ul class="pubs">
+      <li>
+        <span class="year">2026</span>
+        <span class="title">Embryo screening and the new reproductive divide.</span>
+        <div class="meta">Van Hootegem, A., Ghirardi, G., &amp; Harden, K. P. <em>Nature Human Behaviour</em>. <span class="tag">Correspondence</span></div>
+      </li>
+      <li>
+        <span class="year">2021</span>
+        <span class="title">The welfare state criticism of the losers of modernization: How social experiences of resentment shape populist welfare critique.</span>
+        <div class="meta">Van Hootegem, A., Abts, K., &amp; Meuleman, B. <em>Acta Sociologica</em>. <a href="https://doi.org/10.1177/0001699321994191">doi</a></div>
+      </li>
+      <li>
+        <span class="year">2021</span>
+        <span class="title">Measuring public support for distributive justice principles: Assessing the measurement quality of the Basic Social Justice Orientations scale.</span>
+        <div class="meta">Van Hootegem, A., Meuleman, B., &amp; Abts, K. <em>International Journal of Public Opinion Research</em>.</div>
+      </li>
+      <li>
+        <span class="year">2020</span>
+        <span class="title">Attitudes toward asylum policy in a divided Europe: Diverging contexts, diverging attitudes?</span>
+        <div class="meta">Van Hootegem, A., Meuleman, B., &amp; Abts, K. <em>Frontiers in Sociology</em>. <a href="https://doi.org/10.3389/fsoc.2020.00035">doi</a></div>
+      </li>
+      <!-- To add a publication, copy one <li>…</li> block above and edit it. -->
+    </ul>
+    <p class="more">Full list on <a href="https://scholar.google.com/citations?user=5oM4TCcAAAAJ">Google Scholar</a>.</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Research projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Genes and job loss</h3>
+        <p>How genetic predispositions and social context shape the consequences of losing one's job.</p>
+      </div>
+      <div class="card">
+        <h3>ADHD and labour-market outcomes</h3>
+        <p>How ADHD relates to employment, earnings and career trajectories.</p>
+      </div>
+      <div class="card">
+        <h3>Father involvement</h3>
+        <p>A FRIPRO project (Research Council of Norway) on fathers' involvement in family life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK IN PROGRESS -->
+  <section id="wip">
+    <h2>Work in progress</h2>
+    <ul class="pubs">
+      <li>
+        <span class="title">Public opinion on human gene editing: Evidence from a vignette experiment.</span>
+        <div class="meta">With two political scientist co-authors.</div>
+      </li>
+      <li>
+        <span class="title">The acceleration of mental health diagnoses since 2020.</span>
+        <div class="meta">Manuscript in preparation.</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>CV &amp; contact</h2>
+    <!-- To add your CV: upload cv.pdf to the repo; this link will then work. -->
+    <p><a href="cv.pdf">Download CV (PDF)</a></p>
+    <p>Email: <a href="mailto:arno.van.hootegem@fhi.no">arno.van.hootegem@fhi.no</a></p>
+    <p>Centre for Fertility and Health, Norwegian Institute of Public Health<br>Oslo, Norway</p>
+  </section>
+
+</main>
+
+<footer>© 2026 Arno Van Hootegem</footer>
+
+</body>
+</html>
