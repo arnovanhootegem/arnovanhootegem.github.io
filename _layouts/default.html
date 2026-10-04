@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.name }}</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--card:#fff;--text:#1d1d1b;--muted:#5f5d58;--line:#e6e1d8;--accent:#2f5d50;--soft:#e4ede9}
+@media (prefers-color-scheme:dark){:root{--bg:#141513;--card:#1c1d1b;--text:#ecebe6;--muted:#a3a19a;--line:#2e302c;--accent:#8cc4b0;--soft:#23302b}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Inter,system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+nav{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+nav div{max-width:760px;margin:auto;padding:12px 20px;display:flex;gap:20px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--muted);text-decoration:none;font-size:14px}nav a:first-child{color:var(--text);font-family:Fraunces,serif;font-weight:600;margin-right:auto}
+main{max-width:760px;margin:auto;padding:0 20px 80px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2}
+h2{font-size:26px;margin:56px 0 18px;scroll-margin-top:60px}h3{font-size:17px;margin:20px 0 2px}h3+p{margin-top:0;color:var(--muted)}
+.hero{display:flex;gap:26px;align-items:center;flex-wrap:wrap;padding-top:60px}
+.avatar{width:120px;height:120px;border-radius:50%;background:var(--soft);color:var(--accent);display:grid;place-items:center;font:600 40px Fraunces,serif;object-fit:cover}
+.hero h1{font-size:38px;margin:0 0 6px}.hero p{margin:0;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.links a{font-size:14px;text-decoration:none;padding:5px 12px;border:1px solid var(--line);border-radius:99px;background:var(--card)}
+main ul{list-style:none;padding:0}main li{padding:12px 0;border-top:1px solid var(--line)}main li:last-child{border-bottom:1px solid var(--line)}
+footer{max-width:760px;margin:auto;padding:24px 20px 40px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav><div id="nav"><a href="#">{{ page.name }}</a></div></nav>
+<main>
+  <header class="hero">
+    {% if page.photo %}<img class="avatar" src="{{ page.photo }}" alt="{{ page.name }}">{% else %}<div class="avatar">{{ page.initials }}</div>{% endif %}
+    <div>
+      <h1>{{ page.name }}</h1>
+      <p>{{ page.role }}<br>{{ page.place }}</p>
+      <div class="links">{% for l in page.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</div>
+    </div>
+  </header>
+  {{ content }}
+</main>
+<footer>© {{ site.time | date: "%Y" }} {{ page.name }}</footer>
+<script>
+document.querySelectorAll("main h2[id]").forEach(function(h){var a=document.createElement("a");a.href="#"+h.id;a.textContent=h.textContent;document.getElementById("nav").appendChild(a)});
+</script>
+</body>
+</html>
