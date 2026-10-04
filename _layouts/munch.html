@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.name }}</title>
+<meta name="description" content="{{ page.name }} — {{ page.role }}, {{ page.place }}">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+/* Palette taken from Munch's "Melancholy": evening ochre sky, night-blue fjord,
+   green shoreline, a touch of violet dusk and rust. */
+:root{
+  --bg:#f5efe1; --paper:#fbf7ec; --text:#1f2d40; --muted:#5b6571; --line:#e2d7bf;
+  --night:#141f2c; --sea:#1c2d42; --cream:#efe5cb;
+  --ochre:#dcb557; --ochre-ink:#9a6d16; --rust:#b0532c; --shore:#3f6a57; --violet:#6e5f86;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:18px/1.7 Newsreader,Georgia,serif;-webkit-font-smoothing:antialiased}
+a{color:var(--rust);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:#8e3f1f;text-decoration-thickness:2px}
+.hero a{color:var(--cream)}
+
+/* ---------- Painted header ---------- */
+.hero{position:relative;min-height:82vh;min-height:82svh;display:flex;align-items:flex-end;overflow:hidden;background:var(--sea)}
+.hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;width:100%;max-width:1060px;margin:0 auto;padding:0 24px 64px}
+.eyebrow{font:italic 500 20px/1 "Cormorant Garamond",serif;color:var(--ochre);margin:0 0 12px;letter-spacing:.02em}
+.hero h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(48px,9vw,104px);line-height:.95;margin:0 0 18px;
+  color:var(--cream);letter-spacing:-.01em;text-shadow:0 2px 24px rgba(10,16,26,.5)}
+.hero p.role{margin:0;font-size:18px;max-width:560px;color:#e3dac2;text-shadow:0 1px 12px rgba(10,16,26,.6)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.links a{color:var(--cream);text-decoration:none;font-size:15px;padding:6px 16px;border:1px solid rgba(220,181,87,.55);
+  border-radius:99px;background:rgba(20,31,44,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .25s,border-color .25s}
+.links a:hover{background:rgba(220,181,87,.18);border-color:var(--ochre)}
+
+/* ---------- Menu ---------- */
+nav{position:sticky;top:0;z-index:9;background:rgba(245,239,225,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .bar{max-width:1060px;margin:0 auto;padding:0 24px;display:flex;gap:28px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav .bar::-webkit-scrollbar{display:none}
+nav a{color:var(--muted);text-decoration:none;font-size:15px;padding:15px 0;border-bottom:2px solid transparent}
+nav a:hover,nav a.on{color:var(--text);border-color:var(--rust)}
+nav a.home{font:italic 600 20px/1 "Cormorant Garamond",serif;color:var(--text);margin-right:auto;padding:16px 0 14px}
+
+/* ---------- Content ---------- */
+main{max-width:1060px;margin:0 auto;padding:0 24px 110px}
+main h2{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(32px,4.4vw,44px);line-height:1.05;margin:0;color:var(--text);scroll-margin-top:70px}
+section.block{display:grid;grid-template-columns:230px 1fr;gap:44px;padding:84px 0 0;position:relative}
+section.block::before{ /* sinuous divider, like Munch's shoreline */
+  content:"";position:absolute;left:0;right:0;top:30px;height:22px;opacity:.9;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 22' preserveAspectRatio='none'%3E%3Cpath d='M0 15 C 120 2, 230 22, 360 12 S 600 2, 720 13 S 900 20, 1000 6' fill='none' stroke='%23dcb557' stroke-width='1.4'/%3E%3Cpath d='M0 19 C 140 8, 260 24, 390 16 S 640 8, 760 17 S 920 22, 1000 11' fill='none' stroke='%235d8a72' stroke-width='1'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+section.block:first-child::before{display:none}
+section.block > h2{position:sticky;top:80px;align-self:start}
+section.block .body > :first-child{margin-top:0}
+p{margin:0 0 1em}
+
+main ul{list-style:none;padding:0;margin:0 0 1em}
+main li{padding:18px 0;border-top:1px solid var(--line)}
+main li:last-child{border-bottom:1px solid var(--line)}
+main li strong{color:var(--text);font-weight:500}
+main li strong:first-child{color:var(--ochre-ink);font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:600;margin-right:4px}
+main li em{color:var(--shore)}
+
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{position:relative;background:linear-gradient(170deg,var(--paper),#f1e8d3);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--ochre),var(--rust) 55%,var(--violet))}
+.card h3{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:24px;line-height:1.15;margin:4px 0 8px;color:var(--text)}
+.card p{color:var(--muted);font-size:16px;margin:0}
+
+footer{border-top:1px solid var(--line)}
+footer div{max-width:1060px;margin:0 auto;padding:28px 24px 48px;color:var(--muted);font-size:14px;font-style:italic}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  section.block{grid-template-columns:1fr;gap:10px;padding-top:68px}
+  section.block > h2{position:static}
+  .hero{min-height:74vh;min-height:74svh}
+  .hero-inner{padding-bottom:44px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <!-- An evening coast in the spirit of Munch's "Melancholy" (Åsgårdstrand) — drawn in SVG, no image needed. -->
+  <svg class="scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#e9cd78"/>
+        <stop offset=".22" stop-color="#d9ab5c"/>
+        <stop offset=".38" stop-color="#a98378"/>
+        <stop offset=".5" stop-color="#6e6488"/>
+      </linearGradient>
+      <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2d4466"/>
+        <stop offset="1" stop-color="#16243a"/>
+      </linearGradient>
+      <linearGradient id="shore" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#6f9a7c"/>
+        <stop offset=".55" stop-color="#3f6a57"/>
+        <stop offset="1" stop-color="#22423a"/>
+      </linearGradient>
+      <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset=".45" stop-color="#141f2c" stop-opacity="0"/>
+        <stop offset=".85" stop-color="#141f2c" stop-opacity=".35"/>
+        <stop offset="1" stop-color="#141f2c" stop-opacity=".55"/>
+      </linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#f6e2a0" stop-opacity=".7"/><stop offset="1" stop-color="#f6e2a0" stop-opacity="0"/></radialGradient>
+      <filter id="paint" x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency=".012 .03" numOctaves="2" seed="7"/>
+        <feDisplacementMap in="SourceGraphic" scale="14"/>
+      </filter>
+    </defs>
+
+    <rect width="1600" height="900" fill="url(#sky)"/>
+    <!-- low sun glow -->
+    <ellipse cx="1180" cy="270" rx="520" ry="200" fill="url(#glow)"/>
+
+    <g filter="url(#paint)">
+      <!-- far hills across the fjord -->
+      <path d="M0 360 C 160 320, 300 345, 460 330 S 760 300, 930 322 S 1250 352, 1400 330 S 1560 318, 1600 326 L1600 420 L0 420 Z" fill="#4a4f74"/>
+      <path d="M0 392 C 220 372, 420 395, 640 380 S 1060 372, 1280 388 S 1520 380, 1600 384 L1600 430 L0 430 Z" fill="#363e63"/>
+      <!-- the sea -->
+      <path d="M0 410 L1600 405 L1600 900 L0 900 Z" fill="url(#sea)"/>
+      <!-- light on the water -->
+      <path d="M980 440 C 1080 436, 1220 442, 1330 438" stroke="#e9cd78" stroke-width="5" fill="none" opacity=".55" stroke-linecap="round"/>
+      <path d="M900 476 C 1030 470, 1180 480, 1300 474" stroke="#e9cd78" stroke-width="4" fill="none" opacity=".35" stroke-linecap="round"/>
+      <path d="M1040 512 C 1120 508, 1220 514, 1290 510" stroke="#e9cd78" stroke-width="3" fill="none" opacity=".25" stroke-linecap="round"/>
+      <!-- the long sinuous shoreline -->
+      <path d="M0 520 C 180 470, 330 455, 470 470 C 640 488, 700 560, 860 600 C 1040 645, 1240 610, 1400 690 C 1500 740, 1560 820, 1600 900 L0 900 Z" fill="url(#shore)"/>
+      <path d="M0 600 C 200 560, 380 560, 520 590 C 680 625, 780 700, 980 740 C 1150 775, 1320 790, 1440 900 L0 900 Z" fill="#2b4c40" opacity=".75"/>
+      <!-- stones along the beach -->
+      <g fill="#c9b98f" opacity=".5">
+        <ellipse cx="560" cy="520" rx="26" ry="9"/><ellipse cx="640" cy="548" rx="18" ry="7"/>
+        <ellipse cx="760" cy="586" rx="30" ry="10"/><ellipse cx="900" cy="618" rx="22" ry="8"/>
+        <ellipse cx="1080" cy="640" rx="28" ry="9"/>
+      </g>
+      <!-- flowing contour strokes -->
+      <g fill="none" stroke-linecap="round">
+        <path d="M0 512 C 180 462, 330 447, 470 462 C 640 480, 700 552, 860 592 C 1040 637, 1240 602, 1400 682 C 1500 732, 1560 812, 1600 892" stroke="#e9cd78" stroke-width="3" opacity=".45"/>
+        <path d="M0 640 C 220 600, 400 610, 560 640 C 720 672, 820 740, 1020 780" stroke="#9fc2ad" stroke-width="2" opacity=".35"/>
+        <path d="M0 700 C 260 670, 430 690, 600 720 C 760 750, 880 800, 1040 840" stroke="#c2643a" stroke-width="2" opacity=".3"/>
+      </g>
+      <!-- small boat on the fjord -->
+      <path d="M1210 452 q 30 10 60 0 l -6 8 q -24 6 -48 0 z" fill="#efe5cb" opacity=".8"/>
+      <!-- jetty -->
+      <path d="M300 430 L 470 436" stroke="#efe5cb" stroke-width="4" opacity=".55" stroke-linecap="round"/>
+    </g>
+
+    <rect width="1600" height="900" fill="url(#fade)"/>
+  </svg>
+
+  <div class="hero-inner">
+    <p class="eyebrow">{{ page.eyebrow | default: "Sociologist" }}</p>
+    <h1>{{ page.name }}</h1>
+    <p class="role">{{ page.role }}<br>{{ page.place }}</p>
+    <div class="links">{% for l in page.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</div>
+  </div>
+</header>
+
+<nav><div class="bar" id="nav"><a class="home" href="#top">{{ page.name }}</a></div></nav>
+
+<main id="content">
+{{ content }}
+</main>
+
+<footer><div>© {{ site.time | date: "%Y" }} {{ page.name }}</div></footer>
+
+<script>
+// Turns the plain Markdown into the layout: each "##" becomes a section,
+// each "###" inside a section becomes a card. You never need to edit this.
+(function(){
+  var main=document.getElementById("content"), nav=document.getElementById("nav");
+  var nodes=Array.prototype.slice.call(main.childNodes), body=null;
+  main.innerHTML="";
+  nodes.forEach(function(n){
+    if(n.nodeType===1 && n.tagName==="H2"){
+      if(!n.id) n.id=n.textContent.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+      var sec=document.createElement("section"); sec.className="block";
+      body=document.createElement("div"); body.className="body";
+      sec.appendChild(n); sec.appendChild(body); main.appendChild(sec);
+      var a=document.createElement("a"); a.href="#"+n.id; a.textContent=n.textContent; nav.appendChild(a);
+    } else if(body){ body.appendChild(n); } else { main.appendChild(n); }
+  });
+  document.querySelectorAll(".body").forEach(function(b){
+    var h3s=b.querySelectorAll(":scope > h3"); if(!h3s.length) return;
+    var grid=document.createElement("div"); grid.className="cards"; b.insertBefore(grid,h3s[0]);
+    h3s.forEach(function(h){
+      var c=document.createElement("div"); c.className="card"; grid.appendChild(c);
+      var nx=h.nextElementSibling; c.appendChild(h);
+      while(nx && nx.tagName!=="H3" && nx.tagName!=="H2"){ var t=nx.nextElementSibling; c.appendChild(nx); nx=t; }
+    });
+  });
+  var links=nav.querySelectorAll("a:not(.home)");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(l){l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id)})}
+    })},{rootMargin:"-30% 0px -60% 0px"});
+    document.querySelectorAll("section.block > h2").forEach(function(h){io.observe(h)});
+  }
+})();
+</script>
+</body>
+</html>
