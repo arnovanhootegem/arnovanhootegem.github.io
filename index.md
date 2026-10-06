@@ -3,7 +3,6 @@ layout: munch
 name: Arno Van Hootegem
 role: Postdoctoral fellow · Centre for Fertility and Health
 place: Norwegian Institute of Public Health (FHI), Oslo
-eyebrow: Sociologist
 links:
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=5oM4TCcAAAAJ

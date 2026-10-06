@@ -169,7 +169,6 @@ footer div{max-width:1060px;margin:0 auto;padding:28px 24px 48px;color:var(--mut
   </svg>
 
   <div class="hero-inner">
-    <p class="eyebrow">{{ page.eyebrow | default: "Sociologist" }}</p>
     <h1>{{ page.name }}</h1>
     <p class="role">{{ page.role }}<br>{{ page.place }}</p>
     <div class="links">{% for l in page.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</div>
