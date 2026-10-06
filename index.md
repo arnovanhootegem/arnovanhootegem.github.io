@@ -4,7 +4,6 @@ name: Arno Van Hootegem
 role: Postdoctoral fellow · Centre for Fertility and Health
 place: Norwegian Institute of Public Health (FHI), Oslo
 eyebrow: Sociologist
-photo: portrait.jpg
 links:
   - label: Google Scholar
     url: https://scholar.google.com/citations?user=5oM4TCcAAAAJ
@@ -25,10 +24,12 @@ links:
   - _includes/outreach.md          → public outreach
   - _includes/projects.md          → research projects
   - _includes/work-in-progress.md  → work in progress
-  Each "## " heading below becomes a section and a menu item.
+  Each "## " heading below becomes its own tab in the menu.
 -->
 
 ## About
+
+![Arno Van Hootegem](portrait.jpg){: .about-photo}
 
 I am a sociologist working on health, social inequality, genetics and the welfare state. I am a postdoctoral fellow at the Centre for Fertility and Health at the Norwegian Institute of Public Health, where I study mental health, education and the labour market.
 
