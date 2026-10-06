@@ -61,9 +61,16 @@ p{margin:0 0 1em}
 main ul{list-style:none;padding:0;margin:0 0 1em}
 main li{padding:18px 0;border-top:1px solid var(--line)}
 main li:last-child{border-bottom:1px solid var(--line)}
-main li strong{color:var(--text);font-weight:500}
-main li strong:first-child{color:var(--ochre-ink);font-family:"Cormorant Garamond",serif;font-size:20px;font-weight:600;margin-right:4px}
+main li{padding:14px 0;border-top:1px solid var(--line);font-size:.95em;line-height:1.6}
+main li:last-child{border-bottom:1px solid var(--line)}
+main li strong{color:var(--text);font-weight:600}
 main li em{color:var(--shore)}
+main li a{white-space:nowrap}
+/* sub-headings inside a section (written as #### in the Markdown) */
+main h4{font:italic 500 24px/1.2 "Cormorant Garamond",serif;color:var(--ochre-ink);margin:40px 0 6px}
+section.block .body > h4:first-child{margin-top:0}
+.portrait{width:132px;height:132px;border-radius:50%;object-fit:cover;border:3px solid rgba(239,229,203,.9);
+  box-shadow:0 6px 28px rgba(10,16,26,.35);margin:0 0 20px;display:block}
 
 .cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .card{position:relative;background:linear-gradient(170deg,var(--paper),#f1e8d3);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;overflow:hidden}
@@ -80,6 +87,8 @@ footer div{max-width:1060px;margin:0 auto;padding:28px 24px 48px;color:var(--mut
   section.block > h2{position:static}
   .hero{min-height:74vh;min-height:74svh}
   .hero-inner{padding-bottom:44px}
+  .portrait{width:104px;height:104px;margin-bottom:16px}
+  .eyebrow{color:var(--cream);text-shadow:0 1px 10px rgba(10,16,26,.55)}
 }
 </style>
 </head>
@@ -155,6 +164,7 @@ footer div{max-width:1060px;margin:0 auto;padding:28px 24px 48px;color:var(--mut
   </svg>
 
   <div class="hero-inner">
+    {% if page.photo %}<img class="portrait" src="{{ page.photo }}" alt="{{ page.name }}">{% endif %}
     <p class="eyebrow">{{ page.eyebrow | default: "Sociologist" }}</p>
     <h1>{{ page.name }}</h1>
     <p class="role">{{ page.role }}<br>{{ page.place }}</p>
