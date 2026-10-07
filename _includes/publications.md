@@ -7,8 +7,8 @@
 
 #### Journal articles
 
-- Ghirardi, G., **Van Hootegem, A.** & Harden, K. P. (2026). Embryo screening and the new reproductive divide. *Nature Human Behaviour* (Correspondence). [link](https://www.nature.com/articles/s41562-026-02561-x)
-- **Van Hootegem, A.**, Baier, T., Heisig, J. P. & Lyngstad, T. H. (2026). Genetic risks for depression and educational achievement in adolescence. *European Societies*.
+- Ghirardi, G., **Van Hootegem, A.** & Harden, K. P. (2026). Embryo screening and the new reproductive divide. *Nature Human Behaviour* (Correspondence). [doi](https://doi.org/10.1038/s41562-026-02561-x)
+- **Van Hootegem, A.**, Baier, T., Heisig, J. P. & Lyngstad, T. H. (2026). Genetic risks for depression and educational achievement in adolescence. *European Societies*. [doi](https://doi.org/10.1162/EUSO.a.119)
 - Jørgensen, R., **Van Hootegem, A.** & Lyngstad, T. H. (2026). Parental divorce and partnership dynamics: Evidence from Norwegian adoptive and twin families. *Journal of Marriage and Family*. [doi](https://doi.org/10.1111/jomf.70050)
 - Gugushvili, A. & **Van Hootegem, A.** (2026). What are the channels of equality of opportunity perceptions in Germany, Sweden, and the United Kingdom? *Social Psychology Quarterly*.
 - **Van Hootegem, A.**, Rogne, A. F., Cros, C., Røgeberg, O. & Lyngstad, T. H. (2025). Social origins and socioeconomic outcomes: A combined twin and adoption study. *European Sociological Review*. [doi](https://doi.org/10.1093/esr/jcaf029)
@@ -38,7 +38,6 @@
 
 #### Book chapters and reports
 
-- Nemčok, M., **Van Hootegem, A.** & Helgøy, A. (forthcoming). Formative personal experiences in context: Stability and change of welfare attitudes. In M. Eger (Ed.), *A Research Agenda for the Political Sociology of Welfare*. Cheltenham: Edward Elgar.
 - Abts, K., Witlox, F., **Van Hootegem, A.**, Meuleman, B. & Swyngedouw, M. (2023). Publieke opinies over vakbonden: Eigenbelang of toch ideologie? In M. Swyngedouw, K. Abts, C. Meeusen & B. Meuleman (Eds.), *De breuklijnen voorbij? Politieke, culturele en economische scheidslijnen in de publieke opinie* (pp. 183–202). Gent: Skribis.
 - **Van Hootegem, A.**, Abts, K. & Meuleman, B. (2022). Critically different or similarly critical? The roots of welfare state criticism among ethnic minority and majority citizens in Belgium. In M. M. L. Crepaz (Ed.), *Handbook on Migration and Welfare*. Cheltenham: Edward Elgar.
 - **Van Hootegem, A.** & Meuleman, B. (2019). European citizens' opinions towards immigration and asylum policies: A quantitative comparative analysis. In A. Rea, M. Martiniello, A. Mazzola & B. Meuleman (Eds.), *The Refugee Reception Crisis: Polarized Opinions and Mobilizations* (pp. 31–54). Brussels: Éditions de l'Université de Bruxelles.
