@@ -1,0 +1,9 @@
+# Site settings (used by GitHub Pages)
+title: Arno Van Hootegem
+description: Sociologist and postdoctoral fellow at the Centre for Fertility and Health, Norwegian Institute of Public Health. Research on health, social inequality, genetics and the welfare state.
+url: https://arnovanhootegem.github.io
+plugins:
+  - jekyll-sitemap
+exclude:
+  - _cv
+  - README.md
