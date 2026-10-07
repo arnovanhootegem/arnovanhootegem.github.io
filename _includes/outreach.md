@@ -3,6 +3,7 @@
   Copy one line that starts with "- " and paste it at the top. Put the web address in [link](…).
 -->
 
+- **Van Hootegem, A.** (2026). Misschien is het tijd om niet nog meer druk te leggen op moeders, maar vaders verantwoordelijk te houden. *De Standaard*. [link](https://www.standaard.be/opinies/misschien-is-het-tijd-om-niet-nog-meer-druk-te-leggen-op-moeders-maar-vaders-verantwoordelijk-te-houden/161098221.html)
 - **Van Hootegem, A.** & Ghirardi, G. (2025). Embryo selection based on polygenic prediction risks reinforcing social inequality. *Fertility and Sterility*. [link](https://www.fertstert.org/news-do/embryo-selection-based-polygenic-prediction-risks-reinforcing-social-inequality)
 - **Van Hootegem, A.**, Røgeberg, O., Bratsberg, B. & Lyngstad, T. H. (2024). Norwegian study reveals weakening link between education and cognitive ability. *PsyPost*. [link](https://www.psypost.org/norwegian-study-reveals-weakening-link-between-education-and-cognitive-ability/)
 - **Van Hootegem, A.**, Rogne, A. F. & Lyngstad, T. H. (2023). Kuulutko työväenluokkaan, keskiluokkaan vai yläluokkaan? Yhteiskunnallinen asema on paljon kiinni geeneistä. *Helsingin Sanomat*. [link](https://www.hs.fi/tiede/art-2000009491301.html)
