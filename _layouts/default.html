@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.name }}</title>
-<meta name="description" content="{{ page.name }} — {{ page.role }}, {{ page.place }}">
+<title>{{ page.fullname }}</title>
+<meta name="description" content="{{ page.fullname }} — {{ page.role }}, {{ page.place }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -86,19 +86,19 @@ footer div{max-width:1040px;margin:0 auto;padding:28px 24px 44px;color:var(--mut
 <header class="hero" id="top">
   <div class="hero-inner">
     <p class="eyebrow">{{ page.eyebrow | default: "Sociologist" }}</p>
-    <h1>{{ page.name }}</h1>
+    <h1>{{ page.fullname }}</h1>
     <p class="role">{{ page.role }}<br>{{ page.place }}</p>
     <div class="links">{% for l in page.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</div>
   </div>
 </header>
 
-<nav><div class="bar" id="nav"><a class="home" href="#top">{{ page.name }}</a></div></nav>
+<nav><div class="bar" id="nav"><a class="home" href="#top">{{ page.fullname }}</a></div></nav>
 
 <main id="content">
 {{ content }}
 </main>
 
-<footer><div>© {{ site.time | date: "%Y" }} {{ page.name }}</div></footer>
+<footer><div>© {{ site.time | date: "%Y" }} {{ page.fullname }}</div></footer>
 
 <script>
 // Turns the plain Markdown into the layout: each "##" becomes a section,

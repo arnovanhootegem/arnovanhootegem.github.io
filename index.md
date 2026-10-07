@@ -1,6 +1,6 @@
 ---
 layout: munch
-name: Arno Van Hootegem
+fullname: Arno Van Hootegem
 role: Postdoctoral fellow · Centre for Fertility and Health
 place: Norwegian Institute of Public Health (FHI), Oslo
 links:
