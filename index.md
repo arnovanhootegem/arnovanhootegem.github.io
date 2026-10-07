@@ -10,8 +10,6 @@ links:
     url: https://orcid.org/0000-0002-9559-8038
   - label: Bluesky
     url: https://bsky.app/profile/arnovanhootegem.bsky.social
-  - label: CV
-    url: cv.pdf
   - label: Email
     url: mailto:arno.van.hootegem@fhi.no
 ---
