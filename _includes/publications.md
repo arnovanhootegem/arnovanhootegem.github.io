@@ -34,7 +34,6 @@
 - **Van Hootegem, A.**, Meuleman, B. & Abts, K. (2021). Measuring public support for distributive justice principles: Assessing the measurement quality of the Basic Social Justice Orientations scale. *International Journal of Public Opinion Research*. [doi](https://doi.org/10.1093/ijpor/edaa041)
 - **Van Hootegem, A.**, Abts, K. & Meuleman, B. (2020). Differentiated distributive justice preferences? Configurations of preferences for equality, equity and need in three welfare domains. *Social Justice Research*. [doi](https://doi.org/10.1007/s11211-020-00354-9)
 - **Van Hootegem, A.**, Meuleman, B. & Abts, K. (2020). Attitudes toward asylum policy in a divided Europe: Diverging contexts, diverging attitudes? *Frontiers in Sociology*. [doi](https://doi.org/10.3389/fsoc.2020.00035)
-- **Van Hootegem, A.**, Abts, K. & Meuleman, B. (2018). De verzorgingsstaatkritiek van de verliezers: De invloed van maatschappelijk onbehagen. *Sociologie*, 13(2–3), 225–252. [doi](https://doi.org/10.5117/SOC2017.2/3.004.HOOT)
 
 #### Book chapters and reports
 
